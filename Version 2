@@ -1,0 +1,31 @@
+# version 2 — with readable date formatting applied
+
+from datetime import datetime
+
+event_title = input(str("Enter event title:"))
+year = input("Enter year:")
+month = input("Enter month:")
+day = input("Enter day:")
+
+cf_event_title = f"{event_title.strip().upper()}"
+dt_str = f"{year} {month} {day}"
+
+try:
+    dt = datetime.strptime(dt_str, "%Y %B %d")
+except ValueError:
+    dt = datetime.strptime(dt_str, "%Y %m %d")
+
+user_date = dt.strftime("%B %d, %Y")
+cf_year = dt.strftime("%Y")
+cf_month = dt.strftime("%B") 
+cf_day = dt.strftime("%d")
+cf_weekday = dt.strftime("%A")
+
+print("\nFormatted Output:")
+print("Date:", user_date)
+print("Year:", cf_year)
+print("Month:", cf_month)
+print("Day:", cf_day)
+print("Weekday:", cf_weekday)
+
+onlinegdb code: https://onlinegdb.com/J6-LCX7Oe
