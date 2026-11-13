@@ -1,0 +1,17 @@
+# version 1 - basic input and output, no date formatting yet
+
+event_title = input("Enter event title: ")
+year = input("Enter year: ")
+month = input("Enter month: ")
+day = input("Enter day: ")
+
+cf_event_title = event_title.strip().upper()
+
+print("\nFormatted Output:")
+print("Event:", cf_event_title)
+print("Date:", f"{month}/{day}/{year}".capitalize())
+print("Year:", year.capitalize())
+print("Month:", month.capitalize())
+print("Day:", day.capitalize())
+
+onlinegdb code : https://onlinegdb.com/Kv6-JOWxi
